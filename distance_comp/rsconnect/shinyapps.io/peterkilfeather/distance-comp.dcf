@@ -1,0 +1,14 @@
+name: distance-comp
+title: distance-comp
+username:
+account: peterkilfeather
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5246162
+bundleId: 5316525
+url: https://peterkilfeather.shinyapps.io/distance-comp/
+when: 1638396223.11057
+lastSyncTime: 1638396223.11059
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: Distance Comp Test Responses.xlsx
