@@ -21,15 +21,18 @@ gs4_auth(cache = ".secrets",
 
 # Define UI for application that draws a histogram
 
-header <- dashboardHeader(title = "Equicall Distance Competition 2022", 
+header <- dashboardHeader(title = "Equicall Distance Competition 2022",
+                          titleWidth = 450
+                          
                           # Set height of dashboardHeader
-                          tags$li(class = "dropdown",
-                                  tags$style(".main-header .navbar {
-    margin-left: 400px;
-}"), 
-                                  tags$style(".main-header .logo {
-    width: 400px;
-}")))
+#                           tags$li(class = "dropdown",
+#                                   tags$style(".main-header .navbar {
+#     margin-left: 400px;
+# }"), 
+#                                   tags$style(".main-header .logo {
+#     width: 400px;
+# }"))
+                          )
 
 sidebar <- dashboardSidebar(
   sidebarMenu(
@@ -75,7 +78,23 @@ body <- dashboardBody(tabItems(
             box(title = "Individual Swimming Ranking",
                 DTOutput("individual_swimming_ranking"))
           ))
-))
+  
+    
+
+  
+  
+), 
+# Also add some custom CSS to make the title background area the same
+# color as the rest of the header.
+tags$head(tags$style(HTML('
+        .skin-blue .main-header .logo {
+          background-color: #3c8dbc;
+        }
+        .skin-blue .main-header .logo:hover {
+          background-color: #3c8dbc;
+        }
+      ')))
+)
 
 ui <- dashboardPage(
   header, sidebar, body
